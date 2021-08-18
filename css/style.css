@@ -2,7 +2,6 @@
 *{box-sizing: border-box;}
 body{
   font-family: 'Nanum Gothic', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.4; color: #333;
-  height: 6000px;
 }
 a{
   text-decoration: none;
@@ -48,6 +47,22 @@ img{
 .btn.btn--reverse:hover{
   background-color: transparent;
   color: #333;
+}
+.btn.btn--gold{
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover{
+  color: #fff;
+  background-color: #d9aa8a;
+}
+.btn.btn--white{
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover{
+  color: #333;
+  background-color: #fff;
 }
 
 
@@ -539,15 +554,296 @@ header .badges .badge{
   top: 350px;
   left: 150px;
 }
-.youtube .floating3{
+
+/* season */
+.season{
+  background-image: url(../images/season_product_bg.jpg);
+}
+.season .floating3{
   position: absolute;
   top: -200px;
   right: 0;
 }
+.season .inner{
+  height: 400px;
+}
+.season .product{}
+.season .text_group{
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season .title{
+  margin-bottom: 10px;
+}
+.season .description{
+  margin-bottom: 15px;
+}
+.season .more{
+
+}
 
 
+/* reserve */
+.reserve{
+  background-image: url(../images/reserve_bg.jpg);
+}
+.reserve .inner{
+  height: 400px;
+}
+.reserve .logo{
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve .text_group{
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve .title{
+
+}
+.reserve .more{}
+.reserve .product{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 
+/* favorite */
+.favorite{
+  background-image: url(../images/favorite_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.favorite .inner{
+  padding: 110px 0;
+}
+.favorite .text_group{
+  display: flex;
+  width: 362px;
+  margin-left: 100px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.favorite .title{
+  margin-bottom: 40px;
+}
+.favorite .description{
+  margin-bottom: 40px;
+}
+
+
+/* reserve-store */
+.reserve-store{
+  background-image: url(../images/reserve_store_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.reserve-store .inner{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .circle{
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+
+}
+.reserve-store .circle .front,
+.reserve-store .circle .back{
+  position: absolute;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+.reserve-store .circle .front{
+  transform: rotateY(0deg);
+}
+.reserve-store .circle:hover .front{
+  transform: rotateY(180deg);
+}
+.reserve-store .circle .back{
+  transform: rotateY(-180deg);
+}
+.reserve-store .circle:hover .back{
+  transform: rotateY(0deg);
+}
+.reserve-store .circle .btn{
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* find_store */
+.find_store{
+  background-image: url(../images/find_store_bg.jpg);
+}
+.find_store .inner{
+  height: 400px;
+}
+.find_store .texture1{
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find_store .texture2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find_store .picture{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  position: absolute;
+}
+.find_store .picture1{
+  top: -60px;
+  left: 0;
+}
+.find_store .picture2{
+  top: 150px;
+  left: 250px;
+}
+.find_store .text_group{
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find_store .title{
+  margin-bottom: 20px;
+}
+.find_store .description{
+  margin-bottom: 20px;
+}
+.find_store .more{}
+
+
+/* awards */
+.awards{
+  background-color: #272727;
+}
+.awards .inner{
+  padding: 40px 0;
+}
+.awards .swiper-container{
+  width: 100%;
+  height: 40px;
+}
+.awards .swiper-slide{}
+
+.awards .swiper-prev,
+.awards .swiper-next{
+  width: 42px;
+  height: 42px;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  opacity: 0.3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover{
+  color: #333;
+  background-color: #fff;
+}
+.awards .swiper-prev{
+  left: -100px;
+}
+.awards .swiper-next{
+  right: -100px;
+}
+
+
+/* footer */
+footer{
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner{
+  padding: 40px 0 60px;
+}
+footer .menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .menu li{
+  position: relative;
+}
+footer .menu li:not(:last-child)::before{
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  content: "";
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: -1px;
+}
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+footer .menu li:first-child a{
+  color: #669900;
+}
+footer .btns{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .btns .btn{
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btns .btn:last-child{
+  margin-right: 0;
+}
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span{
+  color: #999;
+  font-size: 12px;
+  margin-right: 20px;
+}
+footer .info span:last-child{
+  margin-right: 0;
+}
+footer p{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer img{
+  margin: 30px auto 0;
+}
 
 
 

@@ -74,6 +74,17 @@ new Swiper(".promotion .swiper-container", {
   }
 });
 
+new Swiper(".awards .swiper-container", {
+  slidesPerView: 5,
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  navigation:{
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  }
+});
+
 const promotionEl = document.querySelector(".promotion");
 const promo_toggle = document.querySelector(".promo_toggle");
 let toggle_hide = false;
@@ -86,3 +97,26 @@ promo_toggle.addEventListener("click", function(){
     promotionEl.classList.remove("hide");
   }
 });
+
+function random(min, max){
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
+
+function floatingEls(floating, delay, size){
+  gsap.to(floating, 1, {
+    delay: random(0, delay),
+    y: size,
+    repeat: -1,
+    yoyo: true,
+    ease: Power1.easeInOut
+  })
+};
+
+floatingEls(".floating1", 1, 15);
+floatingEls(".floating2", 0.5, 15);
+floatingEls(".floating3", 1.5, 20);
+
+
+const thisYear = document.querySelector(".this_year");
+thisYear.textContent = new Date().getFullYear();
+
