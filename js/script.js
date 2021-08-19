@@ -117,6 +117,25 @@ floatingEls(".floating2", 0.5, 15);
 floatingEls(".floating3", 1.5, 20);
 
 
+const scrollEls = document.querySelectorAll("section.scroll");
+
+scrollEls.forEach(function(scrollEl){
+  new ScrollMagic.Scene({
+    triggerElement : scrollEl,
+    triggerHook: 0.8
+  }).setClassToggle(scrollEl, "show").addTo(new ScrollMagic.Controller())
+});
+
+
+
+
+
+
+
+
+
+
+
 const thisYear = document.querySelector(".this_year");
 thisYear.textContent = new Date().getFullYear();
 
